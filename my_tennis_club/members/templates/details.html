@@ -1,0 +1,27 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+  
+  <p>Phone {{ mymember.phone }}</p>
+  <p>Member since: {{ mymember.joined_date }}</p>
+  
+  <p>Back to <a href="/members">Members</a></p>
+  
+{% endblock %}
+
+
+  <!--
+    You can also create variables directly in the template, by using the {% with %} template tag.
+
+    The variable is available until the {% endwith %} tag appears:  
+
+    {% with firstname="Tobias" %}
+    <h1>Hello {{ firstname }}, how are you?</h1>
+    {% endwith %}
+  -->
